@@ -1,0 +1,37 @@
+{% extends 'adminlayout.html'%}
+{% load static %}
+
+{% block content%}
+
+
+<form action="{% url 'guardarServicio' %}" method="POST">
+    
+    {% csrf_token %}
+          
+    <h3 class="mb-4">Agregar nuevo Servicio</h3>
+        
+          <p>
+            <label>Nombre Servicio</label>
+            <input type="text" name="nombre_servicio" autofocus required
+              id="nombreServicio" placeholder="Ingrese nombre servicio"/>
+          </p>
+          <p>
+            <label>Descripcion</label>
+            <input type="text" name="descricion" autofocus required
+              id="descripcionServicio" placeholder="Ingrese descripcion"/>
+          </p>
+          <p>
+            <label>Precio</label>
+            <input type="text" name="precio" autofocus required
+              id="precioServicio" placeholder="Ingrese precio servicio"/>
+          </p>
+         
+          <p><input type="submit" class="btn btn-primary btn-block" value="Agregar"></p>
+</form>
+<form action="{% url 'adminServicio'%}">
+    <input type="submit" value="Volver" />
+</form>
+
+</html>
+
+{% endblock %}

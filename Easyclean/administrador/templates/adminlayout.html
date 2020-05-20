@@ -1,0 +1,60 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>EasyClean</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>
+</head>
+
+<body>
+    <!-- cabecera de la pagina -->
+    <header>
+        <div id="logotipo">
+            <!-- logo de Easyclean-->
+           <img src="{% static 'images/logoEasyclean.jpeg' %}" alt="">
+            <h1>Easyclean</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url 'adminHome'%}">Home</a>
+
+            </li>
+            <li>
+                <a href="{% url 'adminServicio'%}">Consultar Servicios</a>
+            </li>
+            <li>
+                <a href="{% url 'adminColaborador'%}">Consultar Colaboradores</a>
+            </li>
+            <li>
+                <a href="{% url 'adminAsignar'%}">Asignar Ordenes</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+
+    <div id="content">
+        <div class="box">
+        
+            {% block content%}
+           
+            {% endblock %}
+
+        </div>
+    </div>
+
+    <footer>
+        Easyclean proyecto desarrollado por Conacev &copy;
+    </footer>
+</body>
+</html> 

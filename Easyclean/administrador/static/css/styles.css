@@ -1,0 +1,11 @@
+form{
+    width: 40%;
+
+}
+
+form input[type="text"],
+form textarea{
+    width: 100%;
+    display: block;
+}
+

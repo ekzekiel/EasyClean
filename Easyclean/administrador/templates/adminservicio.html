@@ -1,0 +1,23 @@
+{% extends 'adminlayout.html'%}
+
+{% block content%}
+
+<form action="" method="POST">
+    {% csrf_token %}
+          
+    <h3 class="mb-4">Consultar Servicio</h3>
+        
+          <p>
+            <input type="text" name="idServicio" autofocus maxlength="254" required
+              id="idServicio" class="form-control" placeholder="ID Servicio"/>
+          </p>
+         
+          <p><input type="submit" class="btn btn-primary btn-block" value="Buscar"></p>
+</form>
+<form action="{% url 'addServicioForm'%}">
+    <input type="submit" value="Agregar Servicio" />
+</form>
+
+
+
+{% endblock %}
